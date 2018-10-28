@@ -23,4 +23,4 @@ async def on_message(message):
         if swr in message.content.lower():
             await client.send_message(message.channel, (random.choice(pfnt) + str(message.author) + '!'))
 
-client.run("NTA0ODM3NDM1MDEyOTM5Nzc2.DraJGg.GL52r8mFz6YF88t5mbbqG8v40gw")
+client.run(os.getenv("TOKEN"))
