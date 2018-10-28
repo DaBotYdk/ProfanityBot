@@ -5,7 +5,7 @@ import asyncio
 import random
 import os
 
-swears = ['fuck','shit','bitch','dick','ass','tit']
+swears = ['fuck','shit','bitch','dick','ass','tit','hell']
 
 pfnt = ["Watch your profanity, ","Don't swear on my Christian Discord server, "]
 
