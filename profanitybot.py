@@ -22,6 +22,6 @@ async def on_ready():
 async def on_message(message):
     for swr in swears:
         if swr in message.content.lower():
-            await client.send_message(message.channel, (random.choice(pfnt) + str(message.author) + '!'))
+            await client.send_message(message.channel, (random.choice(pfnt) + str(message.author.id) + '!'))
 
 client.run(os.getenv("TOKEN"))
