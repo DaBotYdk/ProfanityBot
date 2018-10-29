@@ -22,7 +22,7 @@ async def on_ready():
 async def on_message(message):
     for swr in swears:
         if swr in message.content.lower():
-            await bot.add_reaction(message, 'scream')
+            await bot.add_reaction(message, scream)
             await client.send_message(message.channel, (random.choice(pfnt) + str(message.author) + '!'))
 
 client.run(os.getenv("TOKEN"))
