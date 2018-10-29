@@ -21,7 +21,10 @@ async def on_ready():
 @client.event
 async def on_message(message):
     for swr in swears:
-        if swr in message.content.lower():
+        if message == lastmess:
+            return
+        elif swr in message.content.lower():
             await client.send_message(message.channel, (random.choice(pfnt) + str(message.author) + '!'))
+            lastmess = message
 
 client.run(os.getenv("TOKEN"))
