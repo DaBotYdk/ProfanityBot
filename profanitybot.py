@@ -23,7 +23,7 @@ async def on_ready():
 async def on_message(message):
     for swr in swears:
         if swr in message.content.lower():
-            emoji = get(bot.get_all_emojis(), name='scream')
+            emoji = get(bot.get_all_emojis(), name=':scream:')
             await bot.add_reaction(message, emoji)
             await client.send_message(message.channel, (random.choice(pfnt) + str(message.author) + '!'))
 
