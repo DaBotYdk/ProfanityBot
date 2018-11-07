@@ -24,6 +24,6 @@ async def on_message(message):
         if swr in message.content.lower():
             await client.add_reaction(message, "😠")
             await client.send_message(message.channel, (random.choice(pfnt) + str(message.author) + '!'))
-            await client.delete_messages(message)
+            await client.delete_message(message)
 
 client.run(os.getenv("TOKEN"))
